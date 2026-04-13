@@ -2,7 +2,7 @@ import { Program, AnchorProvider, BN } from "@coral-xyz/anchor";
 import { PublicKey, SystemProgram } from "@solana/web3.js";
 import type { AgentProfile, TaskAccount } from "./types.js";
 
-const PROGRAM_ID = new PublicKey("Sig1LXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+const PROGRAM_ID = new PublicKey("4FFJDq6VQHrxoUyZrfVRaWX135unKNtfa7y6DNrjkhgw");
 
 export class SigilClient {
   constructor(private program: Program, private provider: AnchorProvider) {}

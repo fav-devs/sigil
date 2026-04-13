@@ -17,6 +17,8 @@ target/
 programs/sigil/target/
 test-ledger/
 .anchor/
+**/keypair.json
+**/sigil-keypair.json
 
 # IDE
 .vscode/

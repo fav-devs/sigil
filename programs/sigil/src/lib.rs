@@ -6,7 +6,7 @@ mod errors;
 
 use instructions::*;
 
-declare_id!("Sig1LXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+declare_id!("4FFJDq6VQHrxoUyZrfVRaWX135unKNtfa7y6DNrjkhgw");
 
 #[program]
 pub mod sigil {
