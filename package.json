@@ -1,0 +1,17 @@
+{
+  "name": "sigil",
+  "private": true,
+  "scripts": {
+    "dev:frontend": "pnpm --filter @sigil/app dev",
+    "dev:backend": "pnpm --filter @sigil/backend dev",
+    "dev": "pnpm run --parallel dev:frontend dev:backend",
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "anchor:build": "cd programs/sigil && anchor build",
+    "anchor:test": "cd programs/sigil && anchor test",
+    "anchor:deploy": "cd programs/sigil && anchor deploy"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
