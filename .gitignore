@@ -12,6 +12,7 @@ target/
 .env
 .env.local
 .env.production
+!.env.example
 
 # Solana / Anchor
 programs/sigil/target/
@@ -37,5 +38,8 @@ npm-debug.log*
 # TypeScript
 *.tsbuildinfo
 
+# Turborepo
+.turbo/
 
+# Build plan (local only)
 build-plan.md

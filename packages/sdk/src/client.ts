@@ -104,18 +104,18 @@ export class SigilClient {
 
   async getAgentProfile(authority: PublicKey): Promise<AgentProfile> {
     const [pda] = this.findAgentPda(authority);
-    return await this.program.account.agentProfile.fetch(pda) as unknown as AgentProfile;
+    return await (this.program.account as any).agentProfile.fetch(pda) as AgentProfile;
   }
 
   async getAllAgents(): Promise<AgentProfile[]> {
-    const accounts = await this.program.account.agentProfile.all();
-    return accounts.map((a) => a.account as unknown as AgentProfile);
+    const accounts = await (this.program.account as any).agentProfile.all();
+    return accounts.map((a: any) => a.account as AgentProfile);
   }
 
   async getTasksByStatus(status: string): Promise<TaskAccount[]> {
-    const allTasks = await this.program.account.task.all();
+    const allTasks = await (this.program.account as any).task.all();
     return allTasks
-      .map((t) => t.account as unknown as TaskAccount)
-      .filter((t) => Object.keys(t.status)[0] === status);
+      .map((t: any) => t.account as TaskAccount)
+      .filter((t: TaskAccount) => Object.keys(t.status)[0] === status);
   }
 }
