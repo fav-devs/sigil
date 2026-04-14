@@ -43,3 +43,4 @@ npm-debug.log*
 
 # Build plan (local only)
 build-plan.md
+/docs
